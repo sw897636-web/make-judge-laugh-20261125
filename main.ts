@@ -27,7 +27,7 @@
 // How this program works: it holds the joke as one constant string, creates
 // the /output directory if needed, and writes the string to
 // /output/entry.txt as UTF-8 with no trailing newline, so the file holds
-// exactly the 102 characters of the joke and nothing else. There is no
+// exactly the 163 characters of the joke and nothing else. There is no
 // network access, no randomness, no clock, and no input of any kind, so
 // every run produces byte-identical output. That determinism is the whole
 // point: the grader runs this program twice and the two files must match.
@@ -35,7 +35,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 
 const JOKE =
-  "Our boss renamed the weekly status meeting 'Sync', so now we waste the same hour, just better branded.";
+  "I asked an AI to summarize our 47-minute Monday 'Sync.' It replied: 'Nothing was decided.' My boss Greg approved it as the official minutes and booked a follow-up.";
 
 mkdirSync("/output", { recursive: true });
 writeFileSync("/output/entry.txt", JOKE, "utf8");
